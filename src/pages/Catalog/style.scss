@@ -1,9 +1,9 @@
 .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
-font-family: "Gilroy";
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  font-family: "Gilroy";
   min-height: 100%;
   text-align: start;
   .catalog-title {
@@ -14,99 +14,11 @@ font-family: "Gilroy";
     color: #ededed;
   }
 
-  .catalog-filter {
-    position: relative;
-    user-select: none;
-    .dropdown-btn {
-        position: relative;
-        cursor: pointer;
-      font-weight: 400;
-      font-size: 16px;
-
-      color: #ededed;
-      margin-top: 32px;
-      margin-bottom: 10px;
-      color: hsla(0, 0%, 93%, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      min-width: 172px;
-      max-width: 227px;
-      height: 42px;
-      border-bottom: 1px solid #ededed;
-     .active-svg{
-        transition: all 0.5s;
-        transform: rotate(180deg);
-                path
-{
-            stroke:aliceblue
-        }
-      }
-      .svg{
-        transform:rotate(0deg);
-        transition: ease-in-out 0.5s;
-        -webkit-transition: ease-in-out 0.5s;
-        -moz-transition: ease-in-out 0.5s;
-        -ms-transition: ease-in-out 0.5s;
-        -o-transition: ease-in-out 0.5s;
-}
-    }
-    .dropdown-content {
-        position: absolute;
-        z-index: 200000;
-        top: 85px;
-        left: 0;
-        background: #2B2826;
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        min-width: 172px;
-      max-width: 227px;
-        padding: 20px 82px 32px 20px;
-        gap: 12px;
-        .dropdown-item{
-            cursor: pointer;
-            display: flex;
-            box-sizing: border-box;
-            
-            width: 100%;
-            height: 28px;
-            // margin-top: 12px;
-            display: flex;
-            align-items: center;
-            // background-color: #ededed;
-            span{
-                box-sizing: border-box;
-                display: inline-block;
-                padding: 6px;
-                width: 24px;
-                height: 24px;
-                border: 1px solid rgba(130, 130, 130, 0.6);
-                border-radius:100%;
-                margin-right: 12px            ;
-                -webkit-border-radius:100%;
-                -moz-border-radius:100%;
-                -ms-border-radius:100%;
-                -o-border-radius:100%;
-                
-            }
-            
-.active{
-    background-image: url('./img/Ellipse3.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-        }
-        
-        
-    }
-}
-.dropDowns{
+  .dropDowns {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    align-content: center;
+  }
+  
 }
-}
+
 

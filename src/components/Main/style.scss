@@ -18,7 +18,7 @@
     max-width: 555px;
   }
   .main-btn {
-    font-family: 'Gilroy';
+    font-family: "Gilroy";
     width: 241px;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .main-grid_items {
-  margin: 16px auto 124px ;
+  margin: 16px auto 124px;
   gap: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,21 +62,15 @@
   }
   .first {
     background-image: url("./img/caps.png");
-  
   }
   .second {
     background-image: url("./img/coffeeMachine.png");
-   
   }
   .third {
     background-image: url("./img/capuch.png");
-
-  
   }
   .four {
     background-image: url("./img/accesorise.png");
-
-  
   }
   .grid-item__text {
     margin-top: 44px;
