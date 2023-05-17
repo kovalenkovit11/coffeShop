@@ -1,6 +1,7 @@
 .footer {
   width: 100%;
-  height: 288px;
+  min-height: 288px;
+  height: auto;
   background-color: #111111;
   color: #ededed;
 
@@ -9,13 +10,14 @@
     font-size: 16px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+  
     text-align: start;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
     .footer-items {
       border-right: 1px solid rgba(237, 237, 237, 0.2);
-      width: 100%;
+      width: 284px;
       padding: 0 30px;
       height: 224px;
       box-sizing: border-box;

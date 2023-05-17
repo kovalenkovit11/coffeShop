@@ -20,10 +20,10 @@ const Header = () => {
       </div>
       <div className="container">
         <div className="header-links">
-          <div className="logo">
+          <a href="/"><div className="logo">
             <img className="logo-img" src={logo} alt="logo" />
             <p className="logo-title">Dark coffee capsule</p>
-          </div>
+          </div></a>
           <div className="links">
             <a href="/#">
               <img src={search} alt="insta" />

@@ -1,6 +1,7 @@
 import "./style.scss";
 import DropDown from "../../components/DropDown/DropDown";
 import { useState } from "react";
+import Cards from '../../components/Cards/Cards';
 import {
   category,
   filterByDate,
@@ -71,6 +72,7 @@ function Catalog() {
           selected={selected7}
         />
       </div>
+        <Cards/>
     </div>
   );
 }

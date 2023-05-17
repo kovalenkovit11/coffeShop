@@ -1,20 +1,49 @@
-import React, { useState } from "react";
+
+import React, { useState, useRef, useEffect } from "react";
 import "./style.scss";
 
-const DropDown = ({ options, selected, setSelected, category }) => {
+const DropDown = ({ options, selected, setSelected, category, id }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const dropDownRef = useRef(null);
+  const dropDownContentRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (
+        dropDownRef.current.contains(e.target) ||
+        dropDownContentRef.current.contains(e.target)
+      ) {
+        return;
+      }
+      setIsActive(false);
+    };
+    if (isActive) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isActive]);
 
   const selectItem = (option) => {
     setSelected(option.name);
     setSelectedOption(option.id);
     setIsActive(false);
   };
+
+  const openDropDown = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className="catalog-filter">
       <div
         className="dropdown-btn category"
-        onClick={() => setIsActive(!isActive)}
+        ref={dropDownRef}
+        onClick={() => openDropDown()}
       >
         <p>
           {category} {selected}
@@ -38,7 +67,7 @@ const DropDown = ({ options, selected, setSelected, category }) => {
       </div>
 
       {isActive && (
-        <div className="dropdown-content">
+        <div className="dropdown-content" ref={dropDownContentRef}>
           <div className="dd">
             {options.map((category) => (
               <div
