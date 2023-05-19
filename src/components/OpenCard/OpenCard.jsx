@@ -1,13 +1,13 @@
 import React from 'react'
-import Slider from '../CarouselFadeExample/CarouselFadeExample'
-
+import OpenCardRightSide from '../OpenCardRightSide/OpenCardRightSide'
+import Slider from '../Slider/Slider'
+import './style.scss'
 const OpenCard = () => {
   return (
     <div className='container'>
         <div className='open-card-items'>
-            <div className='open-card-img'>
-                <Slider/>
-            </div>
+            <Slider/>
+            <OpenCardRightSide/>
         </div>
     </div>
   )

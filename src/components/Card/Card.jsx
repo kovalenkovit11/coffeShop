@@ -1,10 +1,9 @@
 import React from "react";
 import "./style.scss";
 import img from './massimo-rosso-min.png'
-import bag from "./Icon/bag-(1).svg"
+import ButtonAddToCart from "../ButtonAddToCart/ButtonAddToCart";
 const Card = () => {
   return (
-    <div className="container">
         <div className="card">
             <div className="card-img">
                 <img src={img} alt="cardImage" />
@@ -14,10 +13,9 @@ const Card = () => {
 </div>
 <div className="card-title">Massimo Intenso</div>
 <div className="card-coast">{13} грн</div>
-<button className="card-buy__btn">Додати у кошик <img src={bag} alt="bag"/></button>
+    <ButtonAddToCart svgColor={'#ededed'}/>
             </div>
 
-        </div>
       
   );
 };
