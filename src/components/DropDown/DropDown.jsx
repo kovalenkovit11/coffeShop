@@ -76,7 +76,7 @@ const DropDown = ({ options, selected, setSelected, category, id }) => {
                 onClick={() => selectItem(category)}
               >
                 <span
-                  className={selectedOption === category.id ? "active" : ""}
+                  className={selectedOption === category.id ? "active-circle" : ""}
                 ></span>
                 <p>{category.name}</p>
               </div>

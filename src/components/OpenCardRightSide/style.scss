@@ -22,18 +22,35 @@
         color: #EDEDED;
     }
     .counter{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 32px;
-        gap: 24px;
+    display: flex;
+    justify-content: center;
+    
+    gap: 12px;
+    align-items: center;
         
         width: 127px;
         height: 42px;
         margin-bottom: 48px;
         background: rgba(255, 255, 255, 0.1);
         border-radius: 100px;
+
+        .minus, .plus{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+        }
+        .disabled{
+            cursor: not-allowed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            color: #616161;
+        }
     }
     .btn-group{
         display: flex;

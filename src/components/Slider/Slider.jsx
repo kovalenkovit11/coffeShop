@@ -33,7 +33,7 @@ const Slider = ()=> {
     <div className="carousel">
            <div>
         <div>
-          <Carousel
+       { data.length >1 ?  <Carousel
             data={data}
             time={0}
             width="850px"
@@ -47,7 +47,7 @@ const Slider = ()=> {
             pauseIconSize="0px"
             slideBackgroundColor="none"
             slideImageFit="cover"
-            thumbnails={true}
+            thumbnails={data.length > 1 ? true : false}
             thumbnailWidth="100px"
             style={{
                 display: "flex",
@@ -55,7 +55,7 @@ const Slider = ()=> {
               textAlign: "center",
               margin: "40px auto",
             }}
-          />
+          /> : data.map( (item) => <div className='carousel-img'> <img src={item.image} alt='card'/> </div>)}
         </div>
       </div>
     </div>

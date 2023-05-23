@@ -2,6 +2,7 @@ import "./style.scss";
 import DropDown from "../../components/DropDown/DropDown";
 import { useState } from "react";
 import Cards from '../../components/Cards/Cards';
+import Modal from '../../components/Modal/Modal';
 import {
   category,
   filterByDate,
@@ -12,7 +13,9 @@ import {
   sizeCup,
 } from "../../utils/filter";
 
-function Catalog() {
+function Catalog({openModal, setOpenModal}) {
+  
+
   const [selected1, setSelected1] = useState("Кава в капсулах");
   const [selected2, setSelected2] = useState("Новинки");
   const [selected3, setSelected3] = useState("Новинки");
@@ -72,7 +75,8 @@ function Catalog() {
           selected={selected7}
         />
       </div>
-        <Cards/>
+        <Cards setOpenModal={setOpenModal}/>
+        <Modal openModal={openModal} setOpenModal={setOpenModal}/>
     </div>
   );
 }
